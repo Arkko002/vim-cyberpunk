@@ -1,4 +1,4 @@
-highlight clear
+" highlight clear
 
 if exists("syntax_on")
   syntax reset
@@ -11,6 +11,13 @@ function! HighlightFor(group, ...)
   execute "hi ".a:group
         \ ." guifg=".a:1
         \ ." guibg=".a:2
+        \ ." gui=".a:3
+endfunction
+
+function! HighlightForGui(group, ...)
+  execute "hi ".a:group
+        \ ." guisp=".a:1
+        \ ." cterm=".a:2
         \ ." gui=".a:3
 endfunction
 
@@ -56,30 +63,31 @@ call HighlightFor("CursorColumn", "NONE",    "NONE",    "NONE")
 
 " Code {{{
 " The following groups are not builtin but are defined commonly in syntax files
-call HighlightFor("Comment",   "#6766b3", "NONE", "NONE")
-call HighlightFor("String",    "#76C1FF", "NONE", "NONE")
-call HighlightFor("Number",    "#fffc58",  "NONE", "NONE")
-call HighlightFor("Float",     "#fffc58",  "NONE", "NONE")
-call HighlightFor("Boolean",   "#fffc58",  "NONE", "NONE")
-call HighlightFor("Character", "#fffc58",  "NONE", "NONE")
+call HighlightFor("Comment",   "#009550", "NONE", "italic") " #6766b3
+call HighlightFor("String",    "#00F5F5", "NONE", "NONE")
+call HighlightFor("Number",    "#00F5F5",  "NONE", "NONE")
+call HighlightFor("Float",     "#00F5F5",  "NONE", "NONE")
+call HighlightFor("Boolean",   "#00F5F5",  "NONE", "NONE")
+call HighlightFor("Character", "#00F5F5",  "NONE", "NONE") " #fffc58
 
-call HighlightFor("Conditional",  "#76C1FF", "NONE", "NONE")
-call HighlightFor("Repeat",       "#76C1FF", "NONE", "NONE")
-call HighlightFor("Label",        "#76C1FF", "NONE", "NONE")
-call HighlightFor("Exception",    "#76C1FF", "NONE", "NONE")
-call HighlightFor("Operator",     "#76C1FF", "NONE", "NONE")
-call HighlightFor("Keyword",      "#76C1FF", "NONE", "NONE")
+call HighlightFor("Conditional",  "#F50000", "NONE", "NONE") " #76C1FF
+call HighlightFor("Repeat",       "#F50000", "NONE", "NONE")
+call HighlightFor("Label",        "#F50000", "NONE", "NONE")
+call HighlightFor("Exception",    "#F50000", "NONE", "NONE")
+call HighlightFor("Operator",     "#F50000", "NONE", "NONE")
+call HighlightFor("Keyword",      "#F50000", "NONE", "NONE")
 call HighlightFor("StorageClass", "#d57bff", "NONE", "NONE")
-call HighlightFor("Statement",    "#76C1FF", "NONE", "NONE")
+call HighlightFor("Statement",    "#F50000", "NONE", "NONE")
+call HighlightFor("Constant",    "#F50000", "NONE", "bold")
 
-call HighlightFor("Function",   "#d57bff", "NONE", "NONE")
-call HighlightFor("Identifier", "#EEFFFF", "NONE", "NONE")
+call HighlightFor("Function",   "#fffc58", "NONE", "NONE") " #d57bff
+call HighlightFor("Identifier", "#00F5F5", "NONE", "NONE") " #EEFFFF
 
 call HighlightFor("PreProc", "#00FF9C", "NONE", "NONE")
 
-call HighlightFor("Type",      "#00FF9C", "NONE", "NONE")
-call HighlightFor("Structure", "#00FF9C", "NONE", "NONE")
-call HighlightFor("Typedef",   "#00FF9C", "NONE", "NONE")
+call HighlightFor("Type",      "#7BF500", "NONE", "bold") " #00FF9C
+call HighlightFor("Structure", "#7BF500", "NONE", "NONE")
+call HighlightFor("Typedef",   "#7BF500", "NONE", "NONE")
 
 call HighlightFor("Underlined", "NONE",    "NONE",    "NONE")
 call HighlightFor("Todo",       "#00FF9C", "#372963", "italic")
@@ -94,6 +102,21 @@ call HighlightFor("Pmenu",      "#ff0055", "#140007", "NONE")
 call HighlightFor("PmenuSel",   "#140007", "#ff0055", "NONE")
 call HighlightFor("PmenuSbar",  "NONE",    "#ff0055", "NONE")
 call HighlightFor("PmenuThumb", "NONE",    "NONE",    "NONE")
+" }}}
+
+
+" Diagnostics  {{{
+call HighlightFor("DiagnosticError",      "#F500F5", "NONE", "NONE")
+call HighlightFor("DiagnosticWarn",   "#F57A00", "NONE", "NONE")
+call HighlightFor("DiagnosticInfo",  "#00F5F5",    "NONE", "NONE")
+call HighlightFor("DiagnosticHint", "#00C8C8",    "NONE",    "NONE")
+call HighlightForGui("DiagnosticUnderlineError",      "#F500F5", "NONE", "underline")
+call HighlightForGui("DiagnosticUnderlineWarn",   "#F57A00", "NONE", "underline")
+call HighlightForGui("DiagnosticUnderlineInfo",  "#00F5F5",    "NONE", "underline")
+call HighlightForGui("DiagnosticUnderlineHint", "#00C8C8",    "NONE",    "underline")
+" }}}
+" Git {{{
+
 " }}}
 
 " Status line {{{
