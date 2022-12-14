@@ -26,7 +26,7 @@ call HighlightFor("Normal",      "#FF0055", "#120b10", "NONE") " old bg: #1a1018
 call HighlightFor("Visual",      "NONE",    "#563466", "NONE")
 call HighlightFor("ColorColumn", "NONE",    "#182333", "NONE")
 call HighlightFor("LineNr",      "#FF0055", "NONE",    "NONE")
-call HighlightFor("SignColumn",  "#00FFC8", "NONE",    "NONE")
+call HighlightFor("SignColumn",  "#00F5F5", "NONE",    "NONE")
 
 call HighlightFor("DiffAdd",    "NONE", "NONE",    "NONE")
 call HighlightFor("DiffDelete", "NONE", "#ff1745", "NONE" )
@@ -39,7 +39,7 @@ call HighlightFor("IncSearch",  "NONE", "#283593", "NONE")
 call HighlightFor("Search",     "NONE", "#283593", "NONE")
 call HighlightFor("Substitute", "NONE", "#283593", "NONE")
 
-call HighlightFor("MatchParen", "#FF0055", "#00FFC8", "NONE")
+call HighlightFor("MatchParen", "#F500F5", "NONE", "bold")
 call HighlightFor("NonText",    "#2B3E5A", "NONE", "NONE")
 call HighlightFor("Whitespace", "#2B3E5A", "NONE", "NONE")
 
@@ -49,7 +49,7 @@ call HighlightFor("Title",     "#c592ff", "NONE", "NONE")
 
 " Cursor {{{
 call HighlightFor("Cursor",       "#00FFC8", "NONE",    "NONE")
-call HighlightFor("CursorLineNr", "#140007", "#00FFC8", "NONE")
+call HighlightFor("CursorLineNr", "#00F5F5", "NONE", "NONE")
 
 " Cursorline type
 if exists("g:cyberpunk_cursorline") && g:cyberpunk_cursorline == "black"
@@ -63,31 +63,31 @@ call HighlightFor("CursorColumn", "NONE",    "NONE",    "NONE")
 
 " Code {{{
 " The following groups are not builtin but are defined commonly in syntax files
-call HighlightFor("Comment",   "#009550", "NONE", "italic") " #6766b3
-call HighlightFor("String",    "#00F5F5", "NONE", "NONE")
-call HighlightFor("Number",    "#00F5F5",  "NONE", "NONE")
-call HighlightFor("Float",     "#00F5F5",  "NONE", "NONE")
-call HighlightFor("Boolean",   "#00F5F5",  "NONE", "NONE")
-call HighlightFor("Character", "#00F5F5",  "NONE", "NONE") " #fffc58
+call HighlightFor("Comment",   "#005900", "NONE", "italic") " #6766b3
+call HighlightFor("String",    "#E1D014", "NONE", "NONE")
+call HighlightFor("Number",    "#E1D014",  "NONE", "NONE")
+call HighlightFor("Float",     "#E1D014",  "NONE", "NONE")
+call HighlightFor("Boolean",   "#E1D014",  "NONE", "NONE")
+call HighlightFor("Character", "#E1D014",  "NONE", "NONE") " #fffc58
 
-call HighlightFor("Conditional",  "#F50000", "NONE", "NONE") " #76C1FF
-call HighlightFor("Repeat",       "#F50000", "NONE", "NONE")
-call HighlightFor("Label",        "#F50000", "NONE", "NONE")
-call HighlightFor("Exception",    "#F50000", "NONE", "NONE")
-call HighlightFor("Operator",     "#F50000", "NONE", "NONE")
-call HighlightFor("Keyword",      "#F50000", "NONE", "NONE")
+call HighlightFor("Conditional",  "#FE514B", "NONE", "NONE") " #76C1FF
+call HighlightFor("Repeat",       "#FE514B", "NONE", "NONE")
+call HighlightFor("Label",        "#FE514B", "NONE", "NONE")
+call HighlightFor("Exception",    "#FE514B", "NONE", "NONE")
+call HighlightFor("Operator",     "#FE514B", "NONE", "NONE")
+call HighlightFor("Keyword",      "#FE514B", "NONE", "NONE")
 call HighlightFor("StorageClass", "#d57bff", "NONE", "NONE")
-call HighlightFor("Statement",    "#F50000", "NONE", "NONE")
-call HighlightFor("Constant",    "#F50000", "NONE", "bold")
+call HighlightFor("Statement",    "#FE514B", "NONE", "NONE")
+call HighlightFor("Constant",    "#FE514B", "NONE", "bold")
 
-call HighlightFor("Function",   "#fffc58", "NONE", "NONE") " #d57bff
-call HighlightFor("Identifier", "#00F5F5", "NONE", "NONE") " #EEFFFF
+call HighlightFor("Function",   "#F50000", "NONE", "NONE") " #d57bff
+call HighlightFor("Identifier", "#00DFDF", "NONE", "NONE") " #EEFFFF
 
 call HighlightFor("PreProc", "#00FF9C", "NONE", "NONE")
 
-call HighlightFor("Type",      "#7BF500", "NONE", "bold") " #00FF9C
-call HighlightFor("Structure", "#7BF500", "NONE", "NONE")
-call HighlightFor("Typedef",   "#7BF500", "NONE", "NONE")
+call HighlightFor("Type",      "#00D560", "NONE", "bold") " #00FF9C
+call HighlightFor("Structure", "#00D560", "NONE", "NONE")
+call HighlightFor("Typedef",   "#00D560", "NONE", "NONE")
 
 call HighlightFor("Underlined", "NONE",    "NONE",    "NONE")
 call HighlightFor("Todo",       "#00FF9C", "#372963", "italic")
@@ -106,13 +106,13 @@ call HighlightFor("PmenuThumb", "NONE",    "NONE",    "NONE")
 
 
 " Diagnostics  {{{
-call HighlightFor("DiagnosticError",      "#F500F5", "NONE", "NONE")
+call HighlightFor("DiagnosticError",      "#B200B2", "NONE", "NONE")
 call HighlightFor("DiagnosticWarn",   "#F57A00", "NONE", "NONE")
-call HighlightFor("DiagnosticInfo",  "#00F5F5",    "NONE", "NONE")
+call HighlightFor("DiagnosticInfo",  "#00C8C8",    "NONE", "NONE")
 call HighlightFor("DiagnosticHint", "#00C8C8",    "NONE",    "NONE")
-call HighlightForGui("DiagnosticUnderlineError",      "#F500F5", "NONE", "underline")
+call HighlightForGui("DiagnosticUnderlineError",      "#B200B2", "NONE", "underline")
 call HighlightForGui("DiagnosticUnderlineWarn",   "#F57A00", "NONE", "underline")
-call HighlightForGui("DiagnosticUnderlineInfo",  "#00F5F5",    "NONE", "underline")
+call HighlightForGui("DiagnosticUnderlineInfo",  "#00C8C8",    "NONE", "underline")
 call HighlightForGui("DiagnosticUnderlineHint", "#00C8C8",    "NONE",    "underline")
 " }}}
 " Git {{{
