@@ -70,8 +70,8 @@ call HighlightFor("Float",     "#E1D014",  "NONE", "NONE")
 call HighlightFor("Boolean",   "#E1D014",  "NONE", "NONE")
 call HighlightFor("Character", "#E1D014",  "NONE", "NONE") " #fffc58
 
-call HighlightFor("Conditional",  "#76C1FF", "NONE", "NONE") " #76C1FF
-call HighlightFor("Repeat",       "#76C1FF", "NONE", "NONE") " #FE514B
+call HighlightFor("Conditional",  "#C80000", "NONE", "NONE") " #76C1FF
+call HighlightFor("Repeat",       "#C80000", "NONE", "NONE") " #FE514B
 call HighlightFor("Label",        "#76C1FF", "NONE", "NONE")
 call HighlightFor("Exception",    "#F50000", "NONE", "NONE")
 call HighlightFor("Operator",     "#76C1FF", "NONE", "NONE")
@@ -86,10 +86,13 @@ call HighlightFor("Delimiter",    "#76C1FF", "NONE", "NONE")
 call HighlightFor("Function",   "#F50000", "NONE", "NONE") " #d57bff
 call HighlightFor("@keyword.function",   "#7BF500", "NONE", "NONE") " #d57bff
 call HighlightFor("Identifier", "#00DFDF", "NONE", "NONE") " #EEFFFF
+call HighlightFor("@variable.builtin", "#7BF500", "NONE", "NONE") " #EEFFFF
+call HighlightFor("@property", "#00B2B2", "NONE", "NONE") " #EEFFFF
 
 call HighlightFor("PreProc", "#00FF9C", "NONE", "NONE")
 
 call HighlightFor("Type",      "#00D560", "NONE", "bold") " #00FF9C
+call HighlightFor("@type.qualifier", "#B20000", "NONE", "NONE") " #EEFFFF
 call HighlightFor("Structure", "#00D560", "NONE", "NONE")
 call HighlightFor("Typedef",   "#00D560", "NONE", "NONE")
 
