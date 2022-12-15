@@ -70,17 +70,21 @@ call HighlightFor("Float",     "#E1D014",  "NONE", "NONE")
 call HighlightFor("Boolean",   "#E1D014",  "NONE", "NONE")
 call HighlightFor("Character", "#E1D014",  "NONE", "NONE") " #fffc58
 
-call HighlightFor("Conditional",  "#FE514B", "NONE", "NONE") " #76C1FF
-call HighlightFor("Repeat",       "#FE514B", "NONE", "NONE")
-call HighlightFor("Label",        "#FE514B", "NONE", "NONE")
-call HighlightFor("Exception",    "#FE514B", "NONE", "NONE")
-call HighlightFor("Operator",     "#FE514B", "NONE", "NONE")
-call HighlightFor("Keyword",      "#FE514B", "NONE", "NONE")
-call HighlightFor("StorageClass", "#d57bff", "NONE", "NONE")
-call HighlightFor("Statement",    "#FE514B", "NONE", "NONE")
-call HighlightFor("Constant",    "#FE514B", "NONE", "bold")
+call HighlightFor("Conditional",  "#76C1FF", "NONE", "NONE") " #76C1FF
+call HighlightFor("Repeat",       "#76C1FF", "NONE", "NONE") " #FE514B
+call HighlightFor("Label",        "#76C1FF", "NONE", "NONE")
+call HighlightFor("Exception",    "#F50000", "NONE", "NONE")
+call HighlightFor("Operator",     "#76C1FF", "NONE", "NONE")
+call HighlightFor("Keyword",      "#76C1FF", "NONE", "NONE")
+call HighlightFor("StorageClass", "#76C1FF", "NONE", "NONE")
+call HighlightFor("Statement",    "#76C1FF", "NONE", "NONE")
+call HighlightFor("Constant",    "#76C1FF", "NONE", "bold")
+
+call HighlightFor("Bracket",    "#76C1FF", "NONE", "NONE")
+call HighlightFor("Delimiter",    "#76C1FF", "NONE", "NONE")
 
 call HighlightFor("Function",   "#F50000", "NONE", "NONE") " #d57bff
+call HighlightFor("@keyword.function",   "#7BF500", "NONE", "NONE") " #d57bff
 call HighlightFor("Identifier", "#00DFDF", "NONE", "NONE") " #EEFFFF
 
 call HighlightFor("PreProc", "#00FF9C", "NONE", "NONE")
@@ -90,7 +94,7 @@ call HighlightFor("Structure", "#00D560", "NONE", "NONE")
 call HighlightFor("Typedef",   "#00D560", "NONE", "NONE")
 
 call HighlightFor("Underlined", "NONE",    "NONE",    "NONE")
-call HighlightFor("Todo",       "#00FF9C", "#372963", "italic")
+call HighlightFor("Todo",       "#00FF9C", "#770501 ", "italic") " #372963
 call HighlightFor("Error",      "#ff3270", "NONE",   "undercurl")
 call HighlightFor("WarningMsg", "#009550", "NONE",   "NONE")
 call HighlightFor("Special",    "#00FF9C", "NONE",   "italic")
@@ -116,7 +120,11 @@ call HighlightForGui("DiagnosticUnderlineInfo",  "#00C8C8",    "NONE", "underlin
 call HighlightForGui("DiagnosticUnderlineHint", "#00C8C8",    "NONE",    "underline")
 " }}}
 " Git {{{
-
+call HighlightFor("GitSignsAdd",   "#00C8C8", "NONE", "bold")
+call HighlightFor("GitSignsDelete",   "#F50000", "NONE", "bold")
+call HighlightFor("GitSignsChange",   "#E1D014", "NONE", "bold")
+call HighlightFor("NeoTreeGitConflict",   "#B200B2", "NONE", "bold")
+call HighlightFor("NeoTreeGitUntracked",   "#005900", "NONE", "bold")
 " }}}
 
 " Status line {{{
@@ -134,3 +142,11 @@ call HighlightFor("TabLineSel",  "#FF4081", "NONE", "bold")
 call HighlightFor("Folded",     "#00FFC8", "NONE", "italic")
 call HighlightFor("FoldColumn", "#00FFC8", "NONE", "NONE")
 " }}}
+" '
+
+call HighlightFor("CmpItemKindEnumDefault", "#E1D014", "NONE", "NONE")
+call HighlightFor("CmpItemKindValueDefault", "#F57A00", "NONE", "NONE")
+call HighlightFor("CmpItemKindFunctionDefault", "#F50000", "NONE", "NONE")
+call HighlightFor("CmpItemKindSnippetDefault", "#00DFDF", "NONE", "NONE")
+
+call HighlightFor("Directory", "#00DFDF", "NONE", "NONE")
