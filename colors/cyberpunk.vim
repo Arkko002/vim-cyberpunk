@@ -1,8 +1,8 @@
 " highlight clear
 
-if exists("syntax_on")
-  syntax reset
-endif
+" if exists("syntax_on")
+"   syntax reset
+" endif
 
 set background=dark
 let g:colors_name = "cyberpunk"
@@ -51,14 +51,18 @@ call HighlightFor("Title",     "#c592ff", "NONE", "NONE")
 call HighlightFor("Cursor",       "#00FFC8", "NONE",    "NONE")
 call HighlightFor("CursorLineNr", "#00F5F5", "NONE", "NONE")
 
-" Cursorline type
-if exists("g:cyberpunk_cursorline") && g:cyberpunk_cursorline == "black"
-  call HighlightFor("CursorLine",   "NONE", "#000000", "NONE")
-else
-  call HighlightFor("CursorLine",   "#140007", "#FF0055", "NONE")
-endif
+" " Cursorline type
+" if exists("g:cyberpunk_cursorline") && g:cyberpunk_cursorline == "black"
+"   call HighlightFor("CursorLine",   "NONE", "#000000", "NONE")
+" else
+"   call HighlightFor("CursorLine",   "#140007", "#FF0055", "NONE")
+" endif
 
-call HighlightFor("CursorColumn", "NONE",    "NONE",    "NONE")
+call HighlightFor("CursorLine",   "NONE", "#001616", "NONE")
+hi def IlluminatedWordText gui=underline
+hi def IlluminatedWordRead gui=underline
+hi def IlluminatedWordWrite gui=underline
+" call HighlightFor("CursorColumn", "NONE",    "NONE",    "NONE")
 " }}}
 
 " Code {{{
@@ -72,21 +76,21 @@ call HighlightFor("Character", "#E1D014",  "NONE", "NONE") " #fffc58
 
 call HighlightFor("Conditional",  "#C80000", "NONE", "NONE") " #76C1FF
 call HighlightFor("Repeat",       "#C80000", "NONE", "NONE") " #FE514B
-call HighlightFor("Label",        "#76C1FF", "NONE", "NONE")
+call HighlightFor("Label",        "#00EB69", "NONE", "NONE")
 call HighlightFor("Exception",    "#F50000", "NONE", "NONE")
-call HighlightFor("Operator",     "#76C1FF", "NONE", "NONE")
-call HighlightFor("Keyword",      "#76C1FF", "NONE", "NONE")
-call HighlightFor("StorageClass", "#76C1FF", "NONE", "NONE")
-call HighlightFor("Statement",    "#76C1FF", "NONE", "NONE")
-call HighlightFor("Constant",    "#76C1FF", "NONE", "bold")
+call HighlightFor("Operator",     "#00EB69", "NONE", "NONE")
+call HighlightFor("Keyword",      "#C80000", "NONE", "NONE")
+call HighlightFor("StorageClass", "#00EB69", "NONE", "NONE")
+call HighlightFor("Statement",    "#00EB69", "NONE", "NONE")
+call HighlightFor("Constant",    "#00EB69", "NONE", "bold")
 
-call HighlightFor("Bracket",    "#76C1FF", "NONE", "NONE")
-call HighlightFor("Delimiter",    "#76C1FF", "NONE", "NONE")
+call HighlightFor("Bracket",    "#00EB69", "NONE", "NONE")
+call HighlightFor("Delimiter",    "#00EB69", "NONE", "NONE")
 
 call HighlightFor("Function",   "#F50000", "NONE", "NONE") " #d57bff
-call HighlightFor("@keyword.function",   "#7BF500", "NONE", "NONE") " #d57bff
+call HighlightFor("@keyword.function",   "#C80000", "NONE", "NONE") " #d57bff
 call HighlightFor("Identifier", "#00DFDF", "NONE", "NONE") " #EEFFFF
-call HighlightFor("@variable.builtin", "#7BF500", "NONE", "NONE") " #EEFFFF
+call HighlightFor("@variable.builtin", "#00AB4D", "NONE", "NONE") " #EEFFFF
 call HighlightFor("@property", "#00B2B2", "NONE", "NONE") " #EEFFFF
 
 call HighlightFor("PreProc", "#00FF9C", "NONE", "NONE")
